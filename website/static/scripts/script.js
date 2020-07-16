@@ -1,0 +1,5 @@
+/*
+
+Main JavaScript for the site.
+
+*/

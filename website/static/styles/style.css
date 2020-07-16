@@ -1,0 +1,77 @@
+/*
+
+This is the custom stylesheet for the site
+
+*/
+
+/* 
+
+Fonts 
+
+*/
+
+body {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+/* 
+
+Navigation Bar Style 
+
+*/
+
+nav.navbar-light {
+    background-color: #ffffff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* 
+
+Button Style 
+
+*/
+
+/* Menu Toggle Button */
+button.navbar-toggler {
+    outline: none;
+    border: none;
+}
+
+button.navbar-toggler>.fa-bars {
+    display:inline;
+}
+
+button.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.fa-bars {
+    display:none;
+}
+
+/* 
+
+Small Screen Style 
+
+*/
+
+@media screen and (max-width: 576px) {
+
+    /* Navigation */
+    nav.navbar-light {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    /* Button */
+    button.btn-full-mobile {
+        width: 100%;
+    }
+
+    /* Mobile Full Width */
+    .full-mobile {
+        width: 100%;
+    }
+
+    /* Masonry Column */
+    .card-columns {
+        column-count: 1;
+    }
+}

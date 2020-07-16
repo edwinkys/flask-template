@@ -1,0 +1,46 @@
+<!--
+
+This is the code for homepage.
+
+-->
+
+{% extends 'layouts/default.html' %}
+
+<!-- Page Title -->
+{% block title %}
+Edwin Kys
+{% endblock %}
+
+<!-- Meta Description -->
+{% block description %}
+
+{% endblock %}
+
+<!-- Custom Inline Style -->
+{% block style %}
+html, body, main {
+    height: 100%;
+}
+
+{% endblock %}
+
+<!-- Page Option -->
+{% set disable_navigation = True %}
+{% set disable_heading = True %}
+{% set disable_footer = True %}
+
+<!-- Page Content Heading -->
+{% block heading %}
+
+{% endblock %}
+
+<!-- Page Content -->
+{% block body %}
+<div class="row align-items-center justify-content-center h-100">
+    <div class="my-auto">
+        <h1 class="display-4 text-dark">
+            Hello world!
+        </h1>
+    </div>
+</div>
+{% endblock %}

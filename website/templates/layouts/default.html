@@ -1,0 +1,176 @@
+<!--
+
+This is the default template of the web application.
+
+-->
+
+<!DOCTYPE HTML>
+<HTML lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/edwinkys-logo.png') }}">
+
+    <!-- Title -->
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="{% block description %}{% endblock %}">
+
+    <!-- Bootstrap Style -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+
+    <!-- Font Awesome -->
+    <link type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
+
+    <!-- Rubik Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+    <!-- Inline Styles -->
+    <style>
+        {% block style %}{% endblock %}
+    </style>
+
+</head>
+<body>
+    {% if disable_navigation %}
+
+    {% else %}
+        <!-- Site Navigation - Default -->
+        <nav class="navbar navbar-expand-sm navbar-light sticky-top shadow-sm">
+            <div class="container">
+
+                <!-- Site Logo -->
+                <a href="{{ url_for('page.home') }}" class="navbar-brand">
+                    <img src="{{ url_for('static', filename='images/edwinkys-logo.png') }}"
+                        class="img-responsive d-inline-block align-top float-left"
+                        width="auto"
+                        height="35px"
+                        title="edwinkys"
+                        alt="Edwin Kys Logo">
+                </a>
+
+                <!-- Collapsible Menu -->
+                <button type="button" 
+                        class="navbar-toggler collapsed"
+                        data-toggle="collapse" 
+                        data-target="#navbar-collapse"
+                        aria-controls="navbar-collapse" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+
+                        <span class="fa fa-bars"></span>
+                        <span class="fa fa-times close"></span>
+                </button>
+
+                <!-- Site Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <div class="dropdown-divider"></div>
+
+                    <!-- Links -->
+                    <ul class="nav navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-dark">About Me</a>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="nav-link">
+                        <button type="button" class="btn btn-outline-primary btn-full-mobile shadow-sm">
+                            Register
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    {% endif %}
+
+    <!-- Site Main Content -->
+    <main class="container">
+        {% if disable_heading %}
+
+        {% else %}
+            <!-- Content Heading -->
+            <div class="row text-center text-md-left mt-5 mb-4">
+                <div class="col-md-6">
+                    <h1>{% block heading %}{% endblock %}</h1>
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- Content Body -->
+        {% block body %}{% endblock %}
+    </main>
+
+    <!-- Site Footer -->
+    {% if disable_footer %}
+
+    {% else %}
+    <footer class="page-footer border-top border-light mt-5 pt-3">
+        <div class="container text-center">
+
+            <!-- Footer Menu -->
+            <ul class="list-inline row">
+                <li class="list-inline-item col-md">
+                    <a href="https://github.com/edwinkys" class="nav-link text-dark">
+                        <i class="fa fa-github-square" aria-hidden="true"></i> GitHub                                
+                    </a>
+                </li>
+
+                <li class="list-inline-item col-md">
+                    <a href="https://www.linkedin.com/in/edwinkys" class="nav-link text-dark">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+
+                <!-- Social Media -->
+                <li class="list-inline-item col-md">
+                    <a href="" class="nav-link text-dark">
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Footer Text -->
+        <div class="container-fluid footer-copyright bg-dark text-center text-light mt-3 py-3">
+            Made with <i class="fa fa-heart"></i> in Arizona
+        
+        </div>
+    </footer>
+    {% endif %}
+
+    <!-- Other Scripts -->
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}">
+    </script>
+
+    <!-- JQuery Source -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
+    </script>
+
+    <!-- Bootstrap Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</HTML>

@@ -1,0 +1,12 @@
+#
+#
+# This file contains the required package to launch the site.
+#
+#
+
+# Flask Framework
+Flask==1.1.2
+
+# Server
+gunicorn==20.0.4
+Werkzeug==1.0.1
